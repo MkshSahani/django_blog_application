@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404 
 from .models import Post 
 
 
@@ -10,10 +10,10 @@ def post_list(request):
     return render(request, 'blog/post/list.html', context) # render List of page. 
 
 
-def post_detail(request, year, month, day, slug): 
+def post_detail(request, year, month, day, post): 
     context = {}
     post = get_object_or_404(Post, 
-                            slug=slug, 
+                            slug=post, 
                             publish__year = year, 
                             publish__month = month, 
                             publish__day = day, 
