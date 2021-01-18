@@ -19,5 +19,5 @@ def post_detail(request, year, month, day, post):
                             publish__day = day, 
                             status='published') # get the object. 
 
-    context['post_details'] = post # details of post added in context. 
+    context['data'] = post # details of post added in context. 
     return render(request, 'blog/post/detail.html',context) # responce to html. 

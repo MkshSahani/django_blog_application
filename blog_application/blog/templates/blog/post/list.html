@@ -12,9 +12,16 @@
             {{ post.title }}
         </h1> 
 
+        
+
         <p> 
             {{ post.post_text }}
         </p> 
+        
+        <a href="{{ post.get_absolute_url }}">
+            Link
+        </a> 
+
         <hr/> 
     {% endfor %}
 
